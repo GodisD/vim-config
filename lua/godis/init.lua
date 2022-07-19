@@ -1,0 +1,5 @@
+require('godis/telescope')
+require('godis/lightline')
+require('godis/gitsigns')
+require('godis/lsp')
+require('godis/treesitter')
