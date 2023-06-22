@@ -2,7 +2,8 @@ local telescope = require('telescope')
 
 telescope.setup {
     defaults = {
-        prompt_prefix = "$$ "
+        prompt_prefix = "$$ ",
+        file_ignore_patterns = {"node_modules"}
     }
 }
 
