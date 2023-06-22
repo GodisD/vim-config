@@ -13,6 +13,9 @@ Plug 'tpope/vim-commentary'
 "GitSigns
 Plug 'lewis6991/gitsigns.nvim'
 
+"REST NVIM
+Plug 'rest-nvim/rest.nvim'
+
 "NerdTree
 Plug 'preservim/nerdtree'
 
@@ -74,36 +77,14 @@ set signcolumn=yes
 set colorcolumn=98
 
 
-
-function! AdaptColorscheme()
-   highlight clear CursorLine
-   highlight Normal ctermbg=none
-   highlight LineNr ctermbg=none
-   highlight Folded ctermbg=none
-   highlight NonText ctermbg=none
-   highlight SpecialKey ctermbg=none
-   highlight VertSplit ctermbg=none
-   highlight SignColumn ctermbg=none
-endfunction
-autocmd ColorScheme * call AdaptColorscheme()
-
-highlight Normal guibg=NONE ctermbg=NONE
-highlight CursorColumn cterm=NONE ctermbg=NONE ctermfg=NONE
-highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE
-highlight CursorLineNr cterm=NONE ctermbg=NONE ctermfg=NONE
-highlight clear LineNr
-highlight clear SignColumn
-highlight clear StatusLine
-
-
 colorscheme pinkmare 
 set background=light
+set guifont=JetBrainsMono\ Nerd\ Font\ Mono:h11
 
 " colorscheme ayu 
 " set background=dark
 
-highlight Normal guibg=none ctermbg=NONE
-
+" let g:nvim_web_devicons_enable = 1
 
 " Keymaps
 let mapleader = ' '
@@ -113,11 +94,13 @@ map <C-x> :tabclose<CR>
 map <C-[> :tabprev<CR>
 map <C-]> :tabnext<CR>
 
-noremap <C-f> :Telescope find_files<Cr>
+nmap <C-j> <Plug>RestNvim
+
 noremap <C-p> :Telescope grep_string<Cr>
+noremap <C-f> :Telescope find_files<Cr>
 noremap <Leader><C-p> :Telescope buffers<Cr>
 vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '>-2<CR>gv=gv
+vnoremap K :m '>-1<CR>gv=gv
 
 nnoremap <C-l> gt
 nnoremap <C-h> gT
