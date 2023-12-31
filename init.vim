@@ -77,7 +77,7 @@ set signcolumn=yes
 set colorcolumn=98
 
 colorscheme pinkmare 
-set background=light
+set background=dark
 set guifont=JetBrainsMono\ Nerd\ Font\ Mono:h11
 
 " colorscheme ayu 
