@@ -76,7 +76,6 @@ set mouse=a
 set signcolumn=yes
 set colorcolumn=98
 
-
 colorscheme pinkmare 
 set background=light
 set guifont=JetBrainsMono\ Nerd\ Font\ Mono:h11
@@ -96,7 +95,7 @@ map <C-]> :tabnext<CR>
 
 nmap <C-j> <Plug>RestNvim
 
-noremap <C-p> :Telescope grep_string<Cr>
+noremap <C-p> :Telescope live_grep<Cr>
 noremap <C-f> :Telescope find_files<Cr>
 noremap <Leader><C-p> :Telescope buffers<Cr>
 vnoremap J :m '>+1<CR>gv=gv
